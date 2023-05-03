@@ -12,9 +12,15 @@ import o1 from '../../../public/assets/01.png';
 import o2 from '../../../public/assets/02.png';
 import o3 from '../../../public/assets/03.png';
 import o4 from '../../../public/assets/04.png';
+import person from "../../../public/assets/user.png";
+import Link from "next/link";
+import {useUser} from "@auth0/nextjs-auth0/client";
+import MenuPage from "@/components/Main/Menu";
 
 
 const Main = () => {
+    const {user} = useUser();
+
     return (
         <Box sx={s.container}>
             <Box sx={s.home}>
@@ -27,10 +33,19 @@ const Main = () => {
                         specialising in digital
                     </Typography>
                 </Box>
+                <Box sx={s.box__auth}>
+                    {!!user ? (
+                        <Box>
+
+                        </Box>
+                    ) : (
+                        <Box></Box>
+                    )}
+                </Box>
                 <Box sx={s.right__box}>
                     <Box sx={s.box__social}>
                         <Box sx={s.burger}>
-                            <Image src={burger} alt="burger_menu"/>
+                            <MenuPage />
                         </Box>
                         <Box sx={s.social}>
                             <Box sx={s.facebook}>

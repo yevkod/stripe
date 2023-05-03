@@ -147,15 +147,19 @@ const styles = {
         margin: "20px auto",
     },
     box__placeholder: {
-        display: "block",
-        width: "640px",
-        borderBottom: "2px solid #637381",
+        display: "flex",
+        width: "10px",
         height: "40px",
         margin: "30px -30px"
     },
+    box__placeholder__textfield: {
+        display: "flex",
+        width: "640px",
+        height: "30px"
+    },
     box__placeholder__main: {
         display: "flex",
-        width: "650px",
+        width: "150px",
         height: "40px",
     },
     box__placeholder__image: {

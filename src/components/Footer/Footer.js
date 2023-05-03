@@ -1,17 +1,28 @@
 import React from 'react';
 import s from './styles';
 import letter from '../../../public/assets/letter.png';
-import {Box, Typography} from "@mui/material";
-import edit from '../../../public/assets/edit.png';
+import {Box, InputAdornment, TextField, Typography} from "@mui/material";
 import Image from "next/image";
 import logo from '../../../public/assets/Logo-white.png';
 import insta_1 from '../../../public/assets/insta_1.png';
 import twitter_1 from '../../../public/assets/twitter_1.png';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import facebook_1 from '../../../public/assets/facebook_1.png';
-import {styled} from "@mui/system";
+import {makeStyles} from "@material-ui/styles";
 
+export const useStyles = makeStyles(() => ({
+    root: {
+
+    },
+    notchedOutline: {
+        '&$notchedOutline': {
+            borderColor: "orange"
+        }
+    }
+}))
 
 const Footer = () => {
+    const classes = useStyles();
     return (
         <Box sx={s.container}>
             <Box sx={s.box}>
@@ -22,10 +33,28 @@ const Footer = () => {
                 <Typography sx={s.text}>Subscribe to our newsletter, we promise not to spam!</Typography>
                 <Box sx={s.box__placeholder}>
                     <Box sx={s.box__placeholder__main}>
-                        <Typography sx={s.box__placeholder__text}>Your email address</Typography>
-                        <Box sx={s.box__placeholder__image}>
-                            <Image src={edit}/>
+                        <Box sx={s.box__placeholder__textfield}>
+                            <TextField
+                                id="email"
+                                label="Your email address"
+                                variant="standard"
+                                sx={{
+                                    width: 640, color: "#FFFFFF"
+                                }}
+                                InputProps={{
+                                    classes: {
+                                        root: classes.root,
+                                        notchedOutline: classes.notchedOutline
+                                    },
+                                    endAdornment: (
+                                        <InputAdornment position="end">
+                                            <EditOutlinedIcon />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                            />
                         </Box>
+
                     </Box>
                 </Box>
             </Box>

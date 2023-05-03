@@ -19,9 +19,41 @@ const styles = {
         height: "100%",
         maxHeight: "655px",
     },
-    right__box: {
-
+    box__auth: {
+        display: "flex",
+        width: "60px",
+        height: "70px",
+        margin: "10px 40px"
     },
+    btn__auth: {
+        display: "block",
+        border: "1px solid #FFFFFF",
+        backgroundColor: "#000000",
+        width: "90px",
+        height: "40px",
+        margin: "0 40px",
+        color: "#000000",
+        textDecoration: "none",
+    },
+    menu__but__1: {
+        padding: "10px 15px",
+        position: "relative",
+        background: "#000000",
+        color: "#ffffff",
+    },
+    auth__text: {
+        color: "#000000",
+        margin: "10px 0"
+    },
+    btn__auth__1: {
+        display: "block",
+        border: "1px solid #FFFFFF",
+        width: "90px",
+        height: "40px",
+        margin: "10px 50px",
+        color: "#FFFFFF"
+    },
+    right__box: {},
     mouse: {
         display: "block",
         width: "30px",
@@ -31,6 +63,12 @@ const styles = {
         width: "100%",
         maxWidth: "120px",
         margin: "20px 0 0 20px",
+    },
+    menu__but: {
+        padding: "10px 15px",
+        position: "relative",
+        background: "#000000",
+        color: "#ffffff",
     },
     text: {
         fontWeight: 500,
@@ -48,6 +86,7 @@ const styles = {
         margin: "20px 30px"
     },
     box_typo: {
+        display: "flex",
         width: "750px",
         maxWidth: "750px",
         position: "relative",
@@ -97,7 +136,7 @@ const styles = {
         width: "15px",
         height: "30px",
         display: "block",
-        margin: "0 12px",
+        margin: "0 -15px",
         cursor: "pointer",
     },
     social: {
