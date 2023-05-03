@@ -8,21 +8,9 @@ import insta_1 from '../../../public/assets/insta_1.png';
 import twitter_1 from '../../../public/assets/twitter_1.png';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import facebook_1 from '../../../public/assets/facebook_1.png';
-import {makeStyles} from "@material-ui/styles";
 
-export const useStyles = makeStyles(() => ({
-    root: {
-
-    },
-    notchedOutline: {
-        '&$notchedOutline': {
-            borderColor: "orange"
-        }
-    }
-}))
 
 const Footer = () => {
-    const classes = useStyles();
     return (
         <Box sx={s.container}>
             <Box sx={s.box}>
@@ -42,10 +30,6 @@ const Footer = () => {
                                     width: 640, color: "#FFFFFF"
                                 }}
                                 InputProps={{
-                                    classes: {
-                                        root: classes.root,
-                                        notchedOutline: classes.notchedOutline
-                                    },
                                     endAdornment: (
                                         <InputAdornment position="end">
                                             <EditOutlinedIcon />
